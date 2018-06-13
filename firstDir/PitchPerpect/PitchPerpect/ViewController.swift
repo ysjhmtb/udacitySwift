@@ -11,11 +11,29 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var recordingLabel: UILabel!
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var stopRecordingButton: UIButton!
+    
+    
+    //viewDidLoad is called when your UIViewController is first loaded into
+    //memory, even before it's shown on screen.
+    //viewWillAppear however is only called
+    //when the view controller is about to be presented on screen,
+    //but before it is actually on the screen.
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear called")
+        
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,4 +51,17 @@ class ViewController: UIViewController {
         print("stop recording button was pressed")
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
